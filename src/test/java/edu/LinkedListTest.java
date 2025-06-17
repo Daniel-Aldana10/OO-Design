@@ -6,10 +6,10 @@ import src.main.java.edu.LinkedList;
 
 import static junit.framework.Assert.assertEquals;
 
-public class LinkedListTest {
+class LinkedListTest {
 
     @Test
-    public void testMeanAndStdDevColumn1() {
+    void testMeanAndStdDevColumn1() {
         LinkedList<Double> data = new LinkedList<>();
         double[] values = {160, 591, 114, 229, 230, 270, 128, 1657, 624, 1503};
         for (double v : values) {
@@ -23,7 +23,7 @@ public class LinkedListTest {
         assertEquals(572.03, stdDev, 0.1);
     }
     @Test
-    public void TestMeanAndStdDevEmpty(){
+    void TestMeanAndStdDevEmpty(){
         LinkedList<Double> data = new LinkedList<>();
         Calculator calculator = new Calculator();
         assertEquals(0.0, calculator.calculateMean(data));

@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
-public class FileReaderTest {
+class FileReaderTest {
     @Test
-    public void testReadFirstColumn() throws IOException {
+    void testReadFirstColumn() throws IOException {
         Path path = Path.of("src/test/resources/test-data.txt");
         List<Double> column = FileReader.readColumn(path, 0);
         Assertions.assertEquals(10, column.size());
@@ -20,7 +20,7 @@ public class FileReaderTest {
     }
 
     @Test
-    public void testReadSecondColumn() throws Exception {
+    void testReadSecondColumn() throws Exception {
         Path path = Path.of("src/test/resources/test-data.txt");
         List<Double> column = FileReader.readColumn(path, 1);
         Assertions.assertEquals(10, column.size());
@@ -29,8 +29,8 @@ public class FileReaderTest {
         Assertions.assertEquals(138.2, column.get(9));
     }
     @Test
-    public void testNegativeValuesStatistics()throws IOException {
-        Path path = Path.of("src/test/resources/test-data-2.txt");
+    void testNegativeValuesStatistics()throws IOException {
+        Path path = Path.of("src/test/resources/Test-data-2.txt");
         List<Double> column1 = FileReader.readColumn(path, 0);
         List<Double> column2 = FileReader.readColumn(path, 1);
         Calculator calculator = new Calculator();
