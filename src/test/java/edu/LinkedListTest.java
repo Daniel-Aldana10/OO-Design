@@ -1,3 +1,5 @@
+package edu;
+
 import org.junit.Test;
 import src.main.java.edu.Calculator;
 import src.main.java.edu.LinkedList;
@@ -19,5 +21,12 @@ public class LinkedListTest {
 
         assertEquals(550.6, mean, 0.1);
         assertEquals(572.03, stdDev, 0.1);
+    }
+    @Test
+    public void TestMeanAndStdDevEmpty(){
+        LinkedList<Double> data = new LinkedList<>();
+        Calculator calculator = new Calculator();
+        assertEquals(0.0, calculator.calculateMean(data));
+        assertEquals(0.0, calculator.calculateStandardDeviation(data));
     }
 }
